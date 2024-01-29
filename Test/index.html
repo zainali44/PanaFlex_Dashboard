@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Display</title>
+    <script>
+        // Fetch data from PHP file and update HTML content
+        fetch('data.php')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('dynamic-content').innerHTML = data;
+            })
+            .catch(error => console.log(error));
+    </script>
+</head>
+<body>
+
+<h2>Data from PHP:</h2>
+
+<div id="dynamic-content">
+    <!-- Placeholder for dynamic content from PHP -->
+</div>
+
+</body>
+</html>
